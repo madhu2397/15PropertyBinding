@@ -1,0 +1,23 @@
+<h1>{{title}}</h1>
+
+<!-- using interpolation -->
+<input type="text" name="username" value="{{name}}">
+<br><br>
+<!-- using Property Binding -->
+<input type="text" name="username" [value]="name">
+<br><br>
+<!-- when you are using interpolation it works fine with numeric & strings but not works boolean values -->
+<!-- interpolation- strings & numbers -->
+<!-- Property Binding - strings, numbers & boolean values -->
+
+<!-- with booleans interpolation-->
+<!-- interpolation will take the boolean values as string so it wont change anything -->
+<input type="text" name="user-name" value="{{name}}" disabled = {{disable}}>  
+<br><br>
+<!-- with booleans property binding -->
+<input type="text" name="user-name" [value]="name" [disabled]="disable">
+
+<br><br>
+
+<input type="text" name="username" placeholder="disable with button">
+<button (click)="getDisable('box')">disable</button>
